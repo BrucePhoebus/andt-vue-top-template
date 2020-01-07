@@ -1,6 +1,7 @@
 <template>
   <div class="user-wrapper">
     <div class="content-box">
+			<notice-icon class="action"></notice-icon>
       <a-dropdown>
         <span class="action ant-dropdown-link user-dropdown-menu">
           <a-avatar class="avatar" size="small" :src="avatar"/>
@@ -20,10 +21,14 @@
 </template>
 
 <script>
+import NoticeIcon from '@/components/NoticeIcon'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'UserMenu',
+	components: {
+		NoticeIcon
+	},
   computed: {
     ...mapGetters(['nickname', 'avatar'])
   },
