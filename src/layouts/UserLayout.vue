@@ -69,7 +69,7 @@
 				text-align: center;
 
 				.header {
-					height: 84px;
+					height: 44px;
 					line-height: 44px;
 
 					.badge {
@@ -83,7 +83,7 @@
 					}
 
 					.logo {
-						height: 84px;
+						height: 44px;
 						vertical-align: top;
 						margin-right: 16px;
 						border-style: none;
