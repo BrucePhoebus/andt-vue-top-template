@@ -25,6 +25,8 @@ export default {
 
 <style lang="less" type="text/less" scoped>
 .demo--demo02 {
-
+	height: 100%;
+	width: 100%;
+	background-color: #FFF;
 }
 </style>
