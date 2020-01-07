@@ -1,6 +1,6 @@
 {
-  "name": "vue-antd-pro-template",
-  "version": "1.1.0",
+  "name": "antd-vue-top-template",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

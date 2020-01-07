@@ -2,8 +2,7 @@
 node_modules
 /node_modules
 /dist
-gxscxd
-/gxscxd
+template
 
 # local env files
 .env.local
