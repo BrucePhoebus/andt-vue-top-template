@@ -10,7 +10,6 @@
       @change="onEditorChange($event)"
 			placeholder="请输入富文本内容">
     </quill-editor>
-
   </div>
 </template>
 
@@ -32,7 +31,6 @@ export default {
       default: 'ant-editor-quill'
     },
     // 表单校验用字段
-
     value: {
       type: String,
       default: ''

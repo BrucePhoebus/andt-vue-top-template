@@ -9,7 +9,6 @@ import { ACCESS_TOKEN } from '@/store/mutation-types'
 // 创建 axios 实例
 const service = axios.create({
   baseURL: process.env.VUE_APP_API_BASE_URL, // api base_url
-  // baseURL: 'http://121.33.210.170:9898/mock/381' + process.env.VUE_APP_API_BASE_URL, // api base_url
   timeout: 6000 // 请求超时时间
 })
 
@@ -71,6 +70,7 @@ const err = (error) => {
 // 请求拦截
 service.interceptors.request.use(config => {
   if (config.url.indexOf('fileUpload') !== -1) {
+  	config.timeout = 3600000;
 	} else if (config.method === 'get' || config.url.indexOf('login') === 1) {
   	config.data = QS.stringify(config.data)
   } else {
@@ -81,7 +81,7 @@ service.interceptors.request.use(config => {
 
 // 响应处理
 service.interceptors.response.use((response) => {
-  if (parseInt(response.data.code) === 200 || parseInt(response.data.code) === 0) {
+  if (parseInt(response.data.code) === 200) {
     // code == 200表示后端处理成功
     return response.data;
   } else if (parseInt(response.data.code) === 2009) {

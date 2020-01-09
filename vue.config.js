@@ -6,11 +6,8 @@ function resolve (dir) {
   return path.join(__dirname, dir)
 }
 
-const isProd = process.env.NODE_ENV === 'production'
-
 const base_url = process.env.BASE_URL;
 
-// vue.config.js
 const vueConfig = {
 	publicPath: base_url,
 	outputDir: "template", // 打包后的项目目录名称
@@ -28,7 +25,6 @@ const vueConfig = {
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
   },
-
   chainWebpack: (config) => {
     config.resolve.alias
       .set('@$', resolve('src'))
@@ -49,7 +45,6 @@ const vueConfig = {
         name: 'assets/[name].[hash:8].[ext]'
       })
   },
-
   css: {
     loaderOptions: {
       less: {
@@ -59,7 +54,6 @@ const vueConfig = {
       }
     }
   },
-
   productionSourceMap: false,
   lintOnSave: false,
   transpileDependencies: []
